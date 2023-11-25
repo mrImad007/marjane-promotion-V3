@@ -12,6 +12,6 @@ public class CaissierResource {
     @GetMapping
     @Produces("text/plain")
     public String hello() {
-        return "Hello, World!";
+        return "Hello, Cassier!";
     }
 }
