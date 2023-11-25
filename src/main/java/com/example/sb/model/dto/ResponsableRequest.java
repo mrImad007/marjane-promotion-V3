@@ -1,7 +1,6 @@
 package com.example.sb.model.dto;
 
 import com.example.sb.model.Entities.Admin;
-import com.example.sb.model.Entities.Centre;
 import com.example.sb.model.Entities.Rayon;
 import com.example.sb.model.Entities.Responsable;
 import jakarta.persistence.Column;

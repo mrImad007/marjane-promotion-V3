@@ -1,12 +1,9 @@
 package com.example.sb.model.mappers.Impl;
 
-import com.example.sb.model.Entities.Rayon;
 import com.example.sb.model.Entities.Responsable;
-import com.example.sb.model.dto.RayonDto;
 import com.example.sb.model.dto.ResponsableDto;
 import com.example.sb.model.mappers.Mapper;
 import org.modelmapper.ModelMapper;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component

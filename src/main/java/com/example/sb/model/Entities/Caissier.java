@@ -1,25 +1,27 @@
 package com.example.sb.model.Entities;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.relational.core.mapping.Table;
 
+@Entity
 @Data
-@Builder
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 @Table
-public class Admin {
+public class Caissier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String first_name;
+    private String last_name;
     private String email;
     private String password;
+
     @ManyToOne
-    @JoinColumn(name = "id_centre")
-    @JsonBackReference
-    private Centre centre;
+    @JoinColumn(name = "id_admin")
+    private Admin admin;
 
 }

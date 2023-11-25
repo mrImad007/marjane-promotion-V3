@@ -1,7 +1,6 @@
 package com.example.sb.model.dto;
 
 import com.example.sb.model.Entities.Admin;
-import com.example.sb.model.dto.RayonDto;  // Importing RayonDto
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

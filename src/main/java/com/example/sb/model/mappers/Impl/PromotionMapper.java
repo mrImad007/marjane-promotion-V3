@@ -2,9 +2,7 @@
 package com.example.sb.model.mappers.Impl;
 
         import com.example.sb.model.Entities.Promotions;
-        import com.example.sb.model.Entities.Rayon;
         import com.example.sb.model.dto.PromotionsDto;
-        import com.example.sb.model.dto.RayonDto;
         import com.example.sb.model.mappers.Mapper;
         import org.modelmapper.ModelMapper;
         import org.springframework.stereotype.Component;

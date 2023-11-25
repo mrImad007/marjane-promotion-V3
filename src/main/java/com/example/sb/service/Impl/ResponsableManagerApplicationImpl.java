@@ -1,5 +1,4 @@
 package com.example.sb.service.Impl;
-import com.example.sb.model.Entities.Admin;
 import com.example.sb.model.Entities.Responsable;
 import com.example.sb.model.dto.ResponsableDto;
 import com.example.sb.model.dto.ResponsableRequest;
