@@ -27,7 +27,8 @@ public class PromotionManagerApplicationImpl implements PromotionManagerApplicat
     public PromotionManagerApplicationImpl(
             PromotionRepository repository,
             CategoryRepository categoryRepository,
-            ProductRepository productRepository, @Qualifier("promotionMapper") Mapper<Promotions, PromotionsDto> promotionmapper) {
+            ProductRepository productRepository,
+            @Qualifier("promotionMapper") Mapper<Promotions, PromotionsDto> promotionmapper) {
         this.repository = repository;
         this.productRepository = productRepository;
         this.promotionmapper = promotionmapper;

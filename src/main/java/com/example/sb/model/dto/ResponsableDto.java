@@ -11,13 +11,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class ResponsableDto {
-
     private Long id;
     private String email;
     private String password;
-
     private Admin admin;
-
     private RayonDto rayon;
 
 }

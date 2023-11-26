@@ -4,10 +4,12 @@ import com.example.sb.model.Entities.Admin;
 import com.example.sb.model.Entities.Rayon;
 import com.example.sb.model.Entities.Responsable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public interface ResponsableRepository  extends JpaRepository<Responsable,Long> {
     public List<Responsable> findAllByEmail(String email);
     public Optional<Responsable> findByEmail(String email);
