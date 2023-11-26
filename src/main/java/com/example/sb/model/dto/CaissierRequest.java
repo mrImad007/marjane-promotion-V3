@@ -21,6 +21,8 @@ public class CaissierRequest {
     @Column(unique = true)
     private String email;
     private String password;
+    private String first_name;
+    private String last_name;
 
     private Long admin_id;
     public Caissier toModel(){
@@ -32,6 +34,8 @@ public class CaissierRequest {
                 builder()
                 .email(this.email)
                 .password(this.password)
+                .first_name(this.first_name)
+                .last_name(this.last_name)
                 .admin(admin)
                 .build();
     }

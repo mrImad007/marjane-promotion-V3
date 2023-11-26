@@ -43,9 +43,8 @@ public class PromotionManagerApplicationImpl implements PromotionManagerApplicat
             Categories categoriesEntity = categoryRepository.findById(promotionRequest.getCategorie_id())
                     .orElseThrow(() -> new RuntimeException("Categories not found"));
 
-            Produits produitsEntity = productRepository.findById(promotionRequest.getCategorie_id())
-                    .orElseThrow(() -> new RuntimeException("product not found"));
-
+//            Produits produitsEntity = productRepository.findById(promotionRequest.getCategorie_id())
+//                    .orElseThrow(() -> new RuntimeException("product not found"));
 //            System.out.println("the product price:: "+ produitsEntity.getPrice());
 
 
