@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class ClientDto {
-    private Long id;
+    private Long code_fidelity;
     @Email(message = "Email was not provided")
     @NotEmpty(message = "email must be present")
     @Column(unique = true)
@@ -27,4 +27,5 @@ public class ClientDto {
     @Size(max = 255, message = "Rayon name cannot exceed 255 characters")
     private String last_name;
     private String password;
+    private Long solde;
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping(path = "api/v2/responsables")
+@RequestMapping(path = "api/v3/responsibles")
 public class ResponsableResource extends Resource<ResponsableDto,ResponsableRequest,Long>{
     @Autowired
     public void setService(

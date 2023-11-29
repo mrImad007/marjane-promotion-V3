@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("api/v2/caissier")
+@RequestMapping("api/v3/cashiers")
 public class CaissierResource {
     private final CaisserManagerApplication caisserManager ;
 
@@ -22,7 +22,7 @@ public class CaissierResource {
         return caisserManager.getAll();
     }
 
-    @PostMapping("/createCaissier")
+    @PostMapping()
     public void save(@RequestBody CaissierRequest caissierRequest){
         caisserManager.save(caissierRequest);
     }

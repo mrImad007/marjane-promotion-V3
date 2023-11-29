@@ -26,6 +26,7 @@ public class ClientRequest {
     private String first_name;
     private String last_name;
     private Long caissier_id;
+    private Long solde;
 
     public Client toModel() {
         Caissier caissier = Caissier.builder().id(caissier_id).build();
@@ -35,6 +36,7 @@ public class ClientRequest {
                 .password(this.password)
                 .first_name(this.first_name)
                 .last_name(this.last_name)
+                .solde(this.solde)
                 .caissier(caissier)
                 .build();
     }

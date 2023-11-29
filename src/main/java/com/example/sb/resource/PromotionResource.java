@@ -11,7 +11,7 @@ package com.example.sb.resource;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping(path = "api/v2/promotions")
+@RequestMapping(path = "api/v3/promotions")
 public class PromotionResource extends Resource<PromotionsDto, PromotionRequest,Long>{
     @Autowired
     public void setService(
