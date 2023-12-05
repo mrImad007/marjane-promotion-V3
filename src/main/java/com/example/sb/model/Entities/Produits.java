@@ -13,7 +13,7 @@ public class Produits {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String produit;
+    private String name;
     private Long price;
     private Long quantity ;
     @ManyToOne

@@ -25,6 +25,7 @@ public class PromotionRequest {
     private Statut statut;
 
     private Integer quantity;
+    private Integer reduction;
 
     private Long responsable_id;
 
@@ -51,6 +52,7 @@ public class PromotionRequest {
                 .datepromo(this.datepromo)
                 .statut(this.statut)
                 .quantity(this.quantity)
+                .reduction(this.reduction)
                 .responsable(responsable1)
                 .categorie(categorie1)
                 .produit(produits1)

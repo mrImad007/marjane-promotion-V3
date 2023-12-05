@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class AdminRequest {
+    private String name;
     @Email(message = "Email was not provided")
     @NotEmpty(message = "email must be present")
     @Column(unique = true)
@@ -29,6 +30,7 @@ public class AdminRequest {
                 .build();
         return Admin.
                 builder()
+                .name(this.name)
                 .email(this.email)
                 .password(this.password)
                 .centre(center)

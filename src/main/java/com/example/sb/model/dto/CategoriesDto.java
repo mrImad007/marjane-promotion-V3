@@ -16,6 +16,6 @@ public class CategoriesDto {
     private Long id;
     @NotBlank(message = "Category name cannot be blank")
     @Size(max = 255, message = "Category name cannot exceed 255 characters")
-    private String categorie;
+    private String name;
     private Rayon rayon;
 }

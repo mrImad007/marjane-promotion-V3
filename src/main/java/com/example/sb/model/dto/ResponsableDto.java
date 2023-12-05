@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ResponsableDto {
     private Long id;
+    private String name;
     private String email;
     private String password;
     private Admin admin;

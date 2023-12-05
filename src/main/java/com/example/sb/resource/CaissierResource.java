@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v3/cashiers")
+@CrossOrigin(origins = "http://localhost:4200")
 public class CaissierResource {
     private final CaisserManagerApplication caisserManager ;
 

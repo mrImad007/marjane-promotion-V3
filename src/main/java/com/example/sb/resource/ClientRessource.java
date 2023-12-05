@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v3/clients")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ClientRessource {
     private final ClientManagerApplication clientManager;
 

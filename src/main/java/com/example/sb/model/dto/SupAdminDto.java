@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 public class SupAdminDto {
 
     private Long id;
+    private String name;
     @Email(message = "Email was not provided")
     @NotEmpty(message = "email must be present")
     @Column(unique = true)

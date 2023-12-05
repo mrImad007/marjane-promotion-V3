@@ -14,7 +14,7 @@ public class Categories {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String categorie;
+    private String name;
     @ManyToOne
     @JoinColumn(name = "id_rayon")
     private Rayon rayon;

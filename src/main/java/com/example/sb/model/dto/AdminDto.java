@@ -14,6 +14,7 @@ import jakarta.validation.constraints.NotEmpty;
 @NoArgsConstructor
 @Builder
 public class AdminDto {
+    private String name;
     @Email(message = "Email was not provided")
     @NotEmpty(message = "email must be present")
     @Column(unique = true)

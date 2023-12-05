@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v3/admins")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AdminResource {
     private final AdminManagerApplication adminService;
     @Autowired

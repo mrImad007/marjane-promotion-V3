@@ -12,6 +12,7 @@ package com.example.sb.resource;
 @AllArgsConstructor
 @RestController
 @RequestMapping(path = "api/v3/promotions")
+@CrossOrigin(origins = "http://localhost:4200")
 public class PromotionResource extends Resource<PromotionsDto, PromotionRequest,Long>{
     @Autowired
     public void setService(

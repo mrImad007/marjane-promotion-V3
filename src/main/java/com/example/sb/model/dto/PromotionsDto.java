@@ -20,6 +20,7 @@ import java.time.LocalDate;
 public class PromotionsDto {
     private Long id;
 
+    private Integer reduction;
     @Valid
     @NotNull(message = "Responsable cannot be null")
     private Responsable responsable;

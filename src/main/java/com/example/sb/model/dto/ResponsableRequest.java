@@ -21,6 +21,7 @@ public class ResponsableRequest {
     @Column(unique = true)
     private String email;
     private String password;
+    private String name;
 
     private Long admin_id;
 
@@ -36,6 +37,7 @@ public class ResponsableRequest {
                 .build();
         return Responsable.
                 builder()
+                .name(this.name)
                 .email(this.email)
                 .password(this.password)
                 .admin(admin1)

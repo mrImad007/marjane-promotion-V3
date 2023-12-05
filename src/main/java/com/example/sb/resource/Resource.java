@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @Component
+@CrossOrigin(origins = "http://localhost:4200")
 public abstract class Resource<Dto,DtoRequest,Identifier> {
     protected Service<Dto,DtoRequest,Identifier> service;
 

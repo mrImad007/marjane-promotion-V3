@@ -28,7 +28,7 @@ public class Promotions {
     @JoinColumn(name = "id_produit")
     private Produits produit;
     private LocalDate datepromo;
-    private Long reduction;
+    private Integer reduction;
     @Enumerated(EnumType.STRING)
     private Statut statut;
     private Integer quantity;
