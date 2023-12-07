@@ -1,4 +1,4 @@
-package com.example.sb.service.Impl;
+package com.service.Impl;
 
 import com.example.sb.model.Enum.Statut;
 import com.example.sb.model.Entities.Categories;
@@ -9,6 +9,7 @@ import com.example.sb.model.dto.PromotionRequest;
 import com.example.sb.model.dto.PromotionsDto;
 import com.example.sb.model.mappers.Mapper;
 import com.example.sb.repo.PromotionRepository;
+import com.example.sb.service.Impl.PromotionManagerApplicationImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

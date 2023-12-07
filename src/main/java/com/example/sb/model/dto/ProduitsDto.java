@@ -12,9 +12,11 @@ import lombok.*;
 public class ProduitsDto {
 
     private Long id;
-    @NotBlank(message = "Product name cannot be blank")
+    @NotBlank(message = "Name name cannot be blank")
     @Size(max = 255, message = "Product name cannot exceed 255 characters")
-    private String produit;
+    private String name;
+    private Long price;
+    private Long quantity ;
     @NotNull(message = "Category cannot be null")
     private Categories categorie;
 

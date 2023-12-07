@@ -1,6 +1,7 @@
 
 package com.example.sb.resource;
 
+        import com.example.sb.model.Enum.Statut;
         import com.example.sb.model.dto.PromotionRequest;
         import com.example.sb.model.dto.PromotionsDto;
 
@@ -16,7 +17,8 @@ package com.example.sb.resource;
 public class PromotionResource extends Resource<PromotionsDto, PromotionRequest,Long>{
     @Autowired
     public void setService(
-            PromotionManagerApplicationImpl service) {
+            PromotionManagerApplicationImpl service
+            ) {
         this.service = service;
     }
     private final PromotionManagerApplicationImpl promotionService;
@@ -36,6 +38,7 @@ public class PromotionResource extends Resource<PromotionsDto, PromotionRequest,
             throw new RuntimeException("Failed to add promotion");
         }
     }
+
 
 
 }

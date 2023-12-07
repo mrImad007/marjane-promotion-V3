@@ -3,6 +3,7 @@ package com.example.sb.service.Impl;
         import com.example.sb.model.Entities.Categories;
         import com.example.sb.model.Entities.Produits;
         import com.example.sb.model.Entities.Promotions;
+        import com.example.sb.model.Enum.Statut;
         import com.example.sb.model.dto.PromotionRequest;
         import com.example.sb.model.dto.PromotionsDto;
         import com.example.sb.model.mappers.Mapper;
@@ -43,13 +44,14 @@ public class PromotionManagerApplicationImpl implements PromotionManagerApplicat
             Categories categoriesEntity = categoryRepository.findById(promotionRequest.getCategorie_id())
                     .orElseThrow(() -> new RuntimeException("Categories not found"));
 
-//            Produits produitsEntity = productRepository.findById(promotionRequest.getCategorie_id())
-//                    .orElseThrow(() -> new RuntimeException("product not found"));
-//            System.out.println("the product price:: "+ produitsEntity.getPrice());
+            Produits produitsEntity = productRepository.findById(promotionRequest.getCategorie_id())
+                    .orElseThrow(() -> new RuntimeException("product not found"));
+            System.out.println("the product price:: "+ produitsEntity.getPrice());
 
 
             Promotions promotionsEntity = promotionRequest.toModel();
             promotionsEntity.setCategorie(categoriesEntity);
+            promotionsEntity.setProduit(produitsEntity);
 
             System.out.println("Before save - Promotions: " + promotionsEntity);
 

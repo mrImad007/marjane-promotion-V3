@@ -20,4 +20,6 @@ public class Produits {
     @JoinColumn(name = "id_categorie")
     private Categories categorie;
 
+    public void setProduit(String sampleProduct) {
+    }
 }

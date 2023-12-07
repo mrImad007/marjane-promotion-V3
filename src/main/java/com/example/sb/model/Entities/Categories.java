@@ -2,9 +2,8 @@ package com.example.sb.model.Entities;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.relational.core.mapping.Table;
-@Getter
+@Data
 @Builder
-@Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,4 +18,6 @@ public class Categories {
     @JoinColumn(name = "id_rayon")
     private Rayon rayon;
 
+    public void setCategorie(String sampleCategory) {
+    }
 }
