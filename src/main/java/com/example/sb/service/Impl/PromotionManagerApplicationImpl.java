@@ -117,5 +117,36 @@ public class PromotionManagerApplicationImpl implements PromotionManagerApplicat
         repository.deleteAll();
     }
 
+//    public PromotionsDto updatePromo(final Long id, final PromotionRequest promotionsRequest) {
+//        promotionsRequest.setId(id);
+//        return null;
+//    }
 
+    public PromotionsDto updatePromo(final Long id, final PromotionRequest promotionRequest) {
+        Optional<Promotions> optionalEntity = repository.findById(id);
+        System.out.println(optionalEntity);
+
+        if (optionalEntity.isPresent()) {
+            Promotions existingPromotion = optionalEntity.get();
+
+            existingPromotion.setStatut(promotionRequest.getStatut());
+            existingPromotion.setDatepromo(promotionRequest.getDatepromo());
+            existingPromotion.setQuantity(promotionRequest.getQuantity());
+            existingPromotion.setReduction(promotionRequest.getReduction());
+
+            Categories categoriesEntity = categoryRepository.findById(promotionRequest.getCategorie_id())
+                    .orElseThrow(() -> new RuntimeException("Categories not found"));
+            Produits produitsEntity = productRepository.findById(promotionRequest.getProduit_id())
+                    .orElseThrow(() -> new RuntimeException("Product not found"));
+
+            existingPromotion.setCategorie(categoriesEntity);
+            existingPromotion.setProduit(produitsEntity);
+
+            Promotions updatedPromotion = repository.save(existingPromotion);
+
+            return promotionmapper.mapTo(updatedPromotion);
+        } else {
+            throw new RuntimeException("Promotion not found with id: " + id);
+        }
+    }
 }

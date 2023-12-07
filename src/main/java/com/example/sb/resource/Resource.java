@@ -32,8 +32,9 @@ public abstract class Resource<Dto,DtoRequest,Identifier> {
     }
     @PutMapping("/{id}")
     public ResponseEntity<Dto> update(@PathVariable("id") final Identifier id, @Valid @RequestBody final Dto dto) {
-        if(!service.isExist(id))
+        if(!service.isExist(id)){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
         var updatedDto = service.update(id, dto);
         return new ResponseEntity<>(updatedDto, HttpStatus.OK);
     }

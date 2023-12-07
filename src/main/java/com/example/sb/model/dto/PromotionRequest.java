@@ -22,6 +22,8 @@ public class PromotionRequest {
     @Column(unique = true)
     private LocalDate datepromo;
 
+    private Long id;
+
     private Statut statut;
 
     private Integer quantity;

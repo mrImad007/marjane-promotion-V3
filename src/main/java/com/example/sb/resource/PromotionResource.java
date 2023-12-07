@@ -6,8 +6,11 @@ package com.example.sb.resource;
         import com.example.sb.model.dto.PromotionsDto;
 
         import com.example.sb.service.Impl.PromotionManagerApplicationImpl;
+        import jakarta.validation.Valid;
         import lombok.AllArgsConstructor;
         import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.http.HttpStatus;
+        import org.springframework.http.ResponseEntity;
         import org.springframework.web.bind.annotation.*;
 
 @AllArgsConstructor
@@ -18,7 +21,7 @@ public class PromotionResource extends Resource<PromotionsDto, PromotionRequest,
     @Autowired
     public void setService(
             PromotionManagerApplicationImpl service
-            ) {
+    ) {
         this.service = service;
     }
     private final PromotionManagerApplicationImpl promotionService;
@@ -39,6 +42,16 @@ public class PromotionResource extends Resource<PromotionsDto, PromotionRequest,
         }
     }
 
+    @PutMapping("/update/{id}")
+    public ResponseEntity<PromotionsDto> update(@PathVariable("id") final Long id, @Valid @RequestBody final PromotionRequest promotionRequest) {
+        if (!service.isExist(id)) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        System.out.println("inside update method");
+        var updatedDto = promotionService.updatePromo(id, promotionRequest);
+        return new ResponseEntity<>(updatedDto, HttpStatus.OK);
+    }
 
 
 }
+
