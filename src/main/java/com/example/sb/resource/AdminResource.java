@@ -6,6 +6,7 @@ import com.example.sb.service.Impl.AdminManagerApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -39,6 +40,12 @@ public class AdminResource {
             @RequestParam (required = false) String email,
             @RequestParam (required = false) String password){
                 adminService.updateAdmin(adminId,email,password);
+    }
+
+    @PostMapping("/auth")
+    public AdminDto auth(@RequestBody HashMap<String, String> request){
+        System.out.println(request.get("email")+" and "+request.get("password"));
+        return adminService.auth(request.get("email"),request.get("password"));
     }
 
 }

@@ -83,4 +83,16 @@ public class AdminManagerApplication {
             return null;
         }
     }
+
+    public AdminDto auth(String email, String password){
+
+        Optional<Admin> adminOptional = adminRepository.findByEmailAndPassword(email,password);
+        if (adminOptional.isPresent()) {
+            Admin adminEntity = adminOptional.get();
+            System.out.println(adminMapper.mapTo(adminEntity));
+            return adminMapper.mapTo(adminEntity);
+        } else {
+            return null;
+        }
+    }
 }
